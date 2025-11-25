@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website ELINS 23 - UNHAS</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      opacity: 0;
+      transition: opacity 0.7s ease-in-out;
+    }
+    body.fade { opacity: 1; }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px 10px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 500;
+      transition: 0.3s;
+      font-size: 15px;
+    }
+    nav a:hover, nav a.active {
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 3px;
+    }
+
+    /* Fade-in Animation */
+    .fade-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: linear-gradient(135deg, #222, #555);
+      color: #fff;
+    }
+    .hero .button {
+      display: inline-block;
+      margin-top: 25px;
+      background: #fff;
+      color: #111;
+      padding: 10px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .hero .button:hover { background: #ddd; }
+
+
+    /* LIST */
+    .list { padding: 40px 15px; text-align: center; }
+
+    table {
+      width: 100%;
+      max-width: 650px;
+      margin: auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+    th {
+      background: #222; 
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+    }
+    td { background: #fafafa; }
+
+    .content {
+      padding: 40px 20px;
+      max-width: 850px;
+      margin: auto;
+      text-align: justify;
+    }
+
+    footer {
+      text-align: center;
+      background: #111;
+      color: #aaa;
+      padding: 15px 0;
+      margin-top: 30px;
+      font-size: 0.85em;
+    }
+
+    /* CARD PROFILE SECTION */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .card p {
+      margin: 8px 0 0 0;
+      font-size: 14px;
+    }
+
+    section.page { display: none; }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lab Elektronika & Instrumentasi 23</h1>
+    <h1 style="font-size: 20px;">UNIVERSITAS HASANUDDIN</h1>
+
+    <nav>
+      <a href="#beranda" class="navlink active">Beranda</a>
+      <a href="#daftar" class="navlink">Daftar Mahasiswa</a>
+      <a href="#tentang" class="navlink">Tentang</a>
+      <a href="#profil" class="navlink">Profil</a>
+      <a href="#kontak" class="navlink">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- BERANDA -->
+  <section id="beranda" class="page fade-section hero" style="display:block;">
+    <h2>Selamat Datang!</h2>
+    <p>Temukan data mahasiswa, profil dosen, dan berbagai informasi terkait kegiatan 
+        Laboratorium Elektronika & Instrumentasi Departemen Fisika UNHAS.</p>
+    <a href="#daftar" class="button navlink">Lihat Daftar</a>
+  </section>
+
+  <!-- TENTANG -->
+  <section id="tentang" class="page fade-section content">
+    <h2>Profil Singkat</h2>
+     <p>Laboratorium Elektronika dan Instrumentasi Departemen Fisika Universitas Hasanuddin merupakan salah satu laboratorium yang berfokus pada pengembangan dan penerapan teknologi elektronika, sensor, dan sistem instrumentasi untuk mendukung kegiatan pembelajaran, penelitian, dan pengabdian masyarakat. Laboratorium ini memfasilitasi mahasiswa dalam memahami prinsip rangkaian elektronika, pengolahan sinyal, sistem kendali, mikrokontroler, serta perancangan perangkat berbasis sensor untuk berbagai aplikasi ilmiah dan industri.</p>
+
+    <p>Lab Elektronika dan Instrumentasi Unhas menjadi wadah penelitian di bidang monitoring lingkungan, otomasi sistem, instrumentasi kesehatan, hingga Internet of Things (IoT). Dengan dukungan perangkat modern serta bimbingan tenaga pendidik yang kompeten, laboratorium ini berperan penting dalam mencetak lulusan Fisika yang memiliki kemampuan analitis dan keterampilan praktis di bidang instrumentasi dan teknologi elektronik.</p>
+  </section>
+  
+  <!-- DAFTAR -->
+  <section id="daftar" class="page fade-section list">
+    <table>
+      <thead>
+        <tr><th>Nama</th><th>NIM</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Dandi Hartono</td><td>H021231007</td></tr>
+        <tr><td>Nur Alik Katu</td><td>H021231041</td></tr>
+        <tr><td>Ansar Mubaroq</td><td>H021231043</td></tr>
+        <tr><td>Sri Wahyuni SM</td><td>H021231053</td></tr>
+        <tr><td>Juliyati Puspita Sari</td><td>H021231052</td></tr>
+        <tr><td>Nur Amalia</td><td>H021231067</td></tr>
+        <tr><td>Sheira Abideva</td><td>H021231022</td></tr>
+        <tr><td>Ulva Asriani Nur</td><td>H02131037</td></tr>
+        <tr><td>Yemima Melanie Surya</td><td>H021231042</td></tr>
+        <tr><td>Ruth Lebang</td><td>H021231005</td></tr>
+        <tr><td>Febrinesya Alfa Tandi Lion</td><td>H021231063</td></tr>
+        <tr><td>Taskiyatunnaps</td><td>H021231055</td></tr>
+        <tr><td>Miswanja Batu Padang</td><td>H021231004</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <!-- PROFIL (CARD) -->
+  <section id="profil" class="page fade-section content">
+    <h2 style="text-align:center; margin-bottom:30px;">Profil Dosen & Staf – Departemen Fisika, UNHAS</h2>
+
+    <div class="card-container">
+
+      <div class="card">
+        <h3>Prof. Dr. Arifin, M.T.</h3>
+        <p><strong>Jabatan:</strong> Dosen</p>
+      </div>
+
+      <div class="card">
+        <h3>Ida Laila, S.Si,M.Si</h3>
+        <p><strong>Jabatan:</strong> Dosen</p>
+      </div>
+
+      <div class="card">
+        <h3>Dr. Ir. Bidayatul Arminah, M.T.</h3>
+        <p><strong>Jabatan:</strong> Dosen</p>
+      </div>
+
+      <div class="card">
+        <h3>Prof. Dr. Bualkar Abdullah, M.Eng.Sc.</h3>
+        <p><strong>Jabatan:</strong> Dosen</p>
+      </div>
+
+      <div class="card">
+        <h3>Syukur Polanunu, S.T.</h3>
+        <p><strong>Jabatan:</strong> PLP / Laboratory Assistant</p>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak" class="page fade-section content">
+    <h2>Hubungi Kami</h2>
+    <p>Jika ada pertanyaan terkait proyek ini, silakan hubungi kami melalui:</p>
+    <ul>
+      <li>Email: elins.project@example.com</li>
+      <li>Instagram: @elins_project</li>
+      <li>GitHub: github.com/elinsproject</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 ELINS Project</p>
+  </footer>
+
+  <script>
+    document.body.classList.add("fade");
+
+    const pages = document.querySelectorAll(".page");
+    const navlinks = document.querySelectorAll(".navlink");
+
+    function showPage(id) {
+      pages.forEach(p => {
+        p.style.display = "none";
+        p.classList.remove("show");
+      });
+
+      const current = document.getElementById(id);
+      current.style.display = "block";
+
+      setTimeout(() => current.classList.add("show"), 50);
+
+      navlinks.forEach(a => a.classList.remove("active"));
+      document.querySelector(`a[href="#${id}"]`)?.classList.add("active");
+    }
+
+    navlinks.forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const target = link.getAttribute("href").replace("#", "");
+        showPage(target);
+      });
+    });
+  </script>
+
+</body>
+</html>
